@@ -37,11 +37,33 @@ XMR
 
 ### Docker
 
+Prebuilt image:
+
+Docker run
+```
+docker run --name=cryptohttp -d -v "$pwd":/app/config -p 8080:8000 --restart unless-stopped ackr8/cryptohttp
+```
+Docker compose
+```
+version: '3.3'
+services:
+    cryptohttp:
+        container_name: cryptohttp
+        volumes:
+            - '$pwd:/app/config'
+        ports:
+            - '8080:8000'
+        restart: unless-stopped
+        image: ackr8/cryptohttp
+```
+
+Manually building the image:
+
 ```
 git clone https://github.com/jakedolan443/cryptohttp
 cd cryptohttp
 docker build -t cryptohttp .
-docker-compose up -d (or) docker run --name=cryptohttp -d -v "$pwd":/app/config -p 8080:8000 --restart unless-stopped cryptohttp
+docker-compose up -d
 ```
 
 Interface, port, and refresh rate may be changed with environment variables within `docker-compose.yaml`.
