@@ -41,7 +41,7 @@ Prebuilt image:
 
 Docker run
 ```
-docker run --name=cryptohttp -d -v "$pwd":/app/config -p 8080:8000 --restart unless-stopped ackr8/cryptohttp
+docker run --name=cryptohttp -d -v "$pwd":/app/config -p 8080:8080 --restart unless-stopped ackr8/cryptohttp
 ```
 Docker compose
 ```
@@ -52,7 +52,7 @@ services:
         volumes:
             - '$pwd:/app/config'
         ports:
-            - '8080:8000'
+            - '8080:8080'
         restart: unless-stopped
         image: ackr8/cryptohttp
 ```
