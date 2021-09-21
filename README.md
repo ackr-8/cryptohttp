@@ -1,10 +1,11 @@
 # CryptoHTTP
 A minimalist, self-hosted web app for viewing cryptocurrency data.
 
-![enter image description here](https://raw.githubusercontent.com/jakedolan443/cryptohttp/main/screenshots/screenshot4.png)
+![](https://raw.githubusercontent.com/jakedolan443/cryptohttp/main/screenshots/screen.png)
+![](https://raw.githubusercontent.com/jakedolan443/cryptohttp/main/screenshots/screen2.png)
 CryptoHTTP is a Flask webserver which uses the `cryptowatch-sdk` module with Kraken's API to deliver a simplistic, minimalist dashboard showing current market data.
 
-Kraken provides a free API, so no API-key is required. By default, the server sends an API request once an hour. Using an API key will increase your limit. [More info](https://support.kraken.com/hc/en-us/articles/360022839451-Generate-API-keys)
+Kraken provides a free API, so no API-key is required, howvever, for frequent API calls (more than once an hour) you should setup a free API account. [Instructions](https://github.com/cryptowatch/cw-sdk-python#setup-your-credential-file)
 
 ## Setup
 
@@ -70,10 +71,9 @@ Interface, port, and refresh rate may be changed with environment variables with
 ## Contribute
 This project is fully open to contribution! The current to-do list:
 
-- Add support for multiple fiat currencies via an external library
-- Add CSS themeing, e.g. light/dark mode
-- Portfolios
-- General optimisation of existing code
+- Cache API data 
+- CSS Themes
+- Add support for multiple fiat currency conversions (e.g. EUR, GBP)
 
 If you are looking to contribute or have any feature ideas, contact me at jakedolan443@protonmail.com.
 
@@ -82,6 +82,8 @@ If you are looking to contribute or have any feature ideas, contact me at jakedo
 Cryptowatch SDK from https://github.com/cryptowatch/cw-sdk-python
 
 API from https://www.kraken.com
+
+Hightables library from https://github.com/dtao/HighTables
 
 Icons obtained from https://github.com/spothq/cryptocurrency-icons/ under Creative Commons License 
 
